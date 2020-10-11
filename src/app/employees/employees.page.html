@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Employees</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let employee of employees" [routerLink]="['/employees',employee.id]">
+      <ion-avatar>
+        <img [src]="employee.imageUrl" />
+      </ion-avatar>
+      <ion-label>&nbsp;&nbsp; {{ employee.title }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
